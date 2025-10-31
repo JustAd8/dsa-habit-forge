@@ -3,9 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Plus, Bell, Clock, Trash2, Edit, ExternalLink } from "lucide-react";
+import { Plus, Bell, Clock, Trash2, Edit, ExternalLink, TestTube } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { alarmService } from "@/services/alarmService";
+import { notificationService } from "@/services/notificationService";
 
 const Alarms = () => {
   const navigate = useNavigate();
@@ -162,6 +164,21 @@ const Alarms = () => {
                         >
                           <ExternalLink className="w-4 h-4 mr-1" />
                           Open Problem
+                        </Button>
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          onClick={async () => {
+                            try {
+                              await alarmService.triggerAlarmManually(alarm.id);
+                              toast.success("Test notification sent!");
+                            } catch (error) {
+                              toast.error("Failed to send test notification");
+                            }
+                          }}
+                        >
+                          <TestTube className="w-4 h-4 mr-1" />
+                          Test
                         </Button>
                         <Button
                           size="sm"
