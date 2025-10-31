@@ -1,73 +1,69 @@
-# Welcome to your Lovable project
+# DSA Habit Forge
 
-## Project info
+A comprehensive DSA (Data Structures & Algorithms) practice tracking application with smart alarm notifications.
 
-**URL**: https://lovable.dev/projects/78907e23-ac74-4254-b56b-f0c31f2d62c6
+## Features
 
-## How can I edit this code?
+- **Smart Alarm System**: Set recurring alarms for DSA practice sessions
+- **Progress Tracking**: Monitor your daily practice habits
+- **Browser Notifications**: Real-time notifications when alarms trigger
+- **Email Notifications**: Optional email alerts via EmailJS
+- **Cloud Database**: MongoDB Atlas integration for data persistence
+- **User Authentication**: Secure login/signup with Supabase
+- **Responsive Design**: Modern UI built with React and Tailwind CSS
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **Frontend**: React 18, TypeScript, Vite
+- **UI Components**: shadcn/ui, Radix UI, Tailwind CSS
+- **Databases**: Supabase (auth), MongoDB Atlas (data)
+- **Notifications**: Browser API, EmailJS
+- **State Management**: React Query, Context API
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/78907e23-ac74-4254-b56b-f0c31f2d62c6) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js 18+
+- npm or yarn
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+1. Clone the repository:
+```bash
 git clone <YOUR_GIT_URL>
+cd dsa-habit-forge
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install dependencies:
+```bash
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+3. Set up environment variables:
+Create a `.env` file in the root directory with:
+```env
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_PUBLISHABLE_KEY=your_supabase_key
+MONGODB_URI=your_mongodb_atlas_uri
+VITE_EMAILJS_SERVICE_ID=your_emailjs_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+4. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+This project is configured for deployment on Vercel. Simply connect your GitHub repository to Vercel and deploy.
 
-**Use GitHub Codespaces**
+## Contributing
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/78907e23-ac74-4254-b56b-f0c31f2d62c6) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
