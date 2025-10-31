@@ -1,11 +1,16 @@
+import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Check, Zap } from "lucide-react";
+import { Check, Zap, CreditCard } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { PaymentService } from "@/services/paymentService";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const Premium = () => {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
   const features = [
     "Unlimited alarms",
@@ -17,6 +22,28 @@ const Premium = () => {
     "Priority support",
     "Export your data",
   ];
+
+  const handleUpgrade = async () => {
+    try {
+      setLoading(true);
+      const { data: { user } } = await supabase.auth.getUser();
+
+      if (!user) {
+        toast.error("Please sign in to upgrade to premium");
+        navigate("/login");
+        return;
+      }
+
+      // For now, use a placeholder price ID - this would be configured in Stripe
+      const priceId = "price_placeholder"; // Replace with actual Stripe price ID
+      await PaymentService.handleSubscription(priceId, user.id);
+    } catch (error) {
+      console.error("Error upgrading to premium:", error);
+      toast.error("Failed to start checkout process");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
@@ -48,17 +75,21 @@ const Premium = () => {
 
             <div className="space-y-4 mb-8">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <div
+                  key={index}
+                  className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5 transition-all duration-300 hover:scale-105 cursor-pointer group"
+                >
+                  <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
                     <Check className="w-3 h-3 text-primary" />
                   </div>
-                  <span className="text-foreground">{feature}</span>
+                  <span className="text-foreground group-hover:text-primary transition-colors">{feature}</span>
                 </div>
               ))}
             </div>
 
-            <Button size="lg" className="w-full mb-4">
-              Upgrade to Premium
+            <Button size="lg" className="w-full mb-4" onClick={handleUpgrade} disabled={loading}>
+              <CreditCard className="w-4 h-4 mr-2" />
+              {loading ? "Processing..." : "Upgrade to Premium"}
             </Button>
 
             <p className="text-center text-sm text-muted-foreground">

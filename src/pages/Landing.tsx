@@ -34,8 +34,8 @@ const Landing = () => {
             <Button size="lg" onClick={() => navigate("/signup")} className="text-lg h-12 px-8">
               Get Started Free
             </Button>
-            <Button size="lg" variant="outline" onClick={() => navigate("/login")} className="text-lg h-12 px-8">
-              View Features
+            <Button size="lg" variant="outline" onClick={() => navigate("/premium")} className="text-lg h-12 px-8">
+              View Premium Features
             </Button>
           </div>
         </div>
