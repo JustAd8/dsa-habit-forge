@@ -1,16 +1,25 @@
-# TODO: Add MongoDB as Cloud Database
+# TODO: Fix Google OAuth and Payment Gateway
 
-## Steps to Complete
-- [x] Install the MongoDB Node.js driver package
-- [x] Create src/integrations/mongodb/ directory
-- [x] Create src/integrations/mongodb/client.ts for MongoDB connection setup
-- [ ] Add MONGODB_URI environment variable to .env file
-- [ ] Test the MongoDB connection (optional, if needed)
+## Google OAuth Issues
+- [ ] Enable Google OAuth in Supabase project (Authentication > Providers > Google)
+- [ ] Add correct redirect URLs in Supabase OAuth settings
+- [ ] Test Google login functionality
 
-## Notes
-- MongoDB is being added alongside existing Supabase integration
-- URI provided: mongodb+srv://adisinrt24_db_user:1234567890@cluster0.imokdvf.mongodb.net/
-- Ensure secure handling of credentials via environment variables
-- Connection test attempted but encountered SSL/TLS error (likely network or firewall issue)
-- Client setup is ready for use in the application
-- SSL/TLS error suggests potential network configuration or MongoDB Atlas whitelist issues
+## Payment Gateway Issues
+- [ ] Add VITE_STRIPE_PUBLISHABLE_KEY to .env file
+- [ ] Set up Vercel environment variables for Stripe
+- [ ] Create actual Stripe price ID (replace price_placeholder)
+- [ ] Set up Stripe webhook endpoints for subscription management
+- [ ] Create API route for /api/create-checkout-session
+- [ ] Test payment flow end-to-end
+
+## Environment Variables Needed
+- VITE_STRIPE_PUBLISHABLE_KEY
+- STRIPE_SECRET_KEY (for backend)
+- STRIPE_WEBHOOK_SECRET (for webhooks)
+
+## Files to Modify
+- .env (add Stripe keys)
+- src/pages/Premium.tsx (update price ID)
+- Create API route for checkout session
+- Vercel environment variables

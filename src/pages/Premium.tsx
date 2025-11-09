@@ -34,8 +34,8 @@ const Premium = () => {
         return;
       }
 
-      // For now, use a placeholder price ID - this would be configured in Stripe
-      const priceId = "price_placeholder"; // Replace with actual Stripe price ID
+      // Stripe price ID for monthly premium subscription
+      const priceId = "price_1Qabcdefghijklmnop"; // Replace with your actual Stripe price ID
 
       if (!import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY) {
         toast.error("Payment system is not configured. Please contact support.");
