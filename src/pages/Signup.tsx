@@ -37,8 +37,8 @@ const Signup = () => {
 
       toast.success("Account created successfully!");
       navigate("/dashboard");
-    } catch (error: any) {
-      toast.error(error.message || "Failed to create account");
+    } catch (error) {
+      toast.error((error as Error).message || "Failed to create account");
     } finally {
       setLoading(false);
     }
@@ -54,8 +54,8 @@ const Signup = () => {
       });
 
       if (error) throw error;
-    } catch (error: any) {
-      toast.error(error.message || "Failed to sign up with Google");
+    } catch (error) {
+      toast.error((error as Error).message || "Failed to sign up with Google");
     }
   };
 

@@ -128,7 +128,7 @@ const Alarms = () => {
             </Card>
           ) : (
             <div className="space-y-4">
-              {alarms.map((alarm: any) => (
+              {alarms.map((alarm) => (
                 <Card key={alarm.id} className="p-6">
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">

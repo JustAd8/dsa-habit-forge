@@ -161,7 +161,7 @@ const Dashboard = () => {
               </div>
             ) : (
               <div className="space-y-4">
-                {alarms.slice(0, 5).map((alarm: any) => (
+                {alarms.slice(0, 5).map((alarm) => (
                   <div
                     key={alarm.id}
                     className="flex items-center justify-between p-4 rounded-lg border border-border bg-secondary/20 hover:bg-secondary/40 transition-colors"

@@ -271,7 +271,7 @@ const Analytics = () => {
               </div>
             ) : (
               <div className="space-y-4">
-                {alarms.slice(0, 10).map((alarm: any) => (
+                {alarms.slice(0, 10).map((alarm) => (
                   <div
                     key={alarm.id}
                     className="flex items-center justify-between p-4 rounded-lg border border-border bg-secondary/20"

@@ -29,8 +29,8 @@ const Login = () => {
 
       toast.success("Welcome back!");
       navigate("/dashboard");
-    } catch (error: any) {
-      toast.error(error.message || "Failed to sign in");
+    } catch (error) {
+      toast.error((error as Error).message || "Failed to sign in");
     } finally {
       setLoading(false);
     }
@@ -46,8 +46,8 @@ const Login = () => {
       });
 
       if (error) throw error;
-    } catch (error: any) {
-      toast.error(error.message || "Failed to sign in with Google");
+    } catch (error) {
+      toast.error((error as Error).message || "Failed to sign in with Google");
     }
   };
 

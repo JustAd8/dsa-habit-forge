@@ -76,8 +76,8 @@ const NewAlarm = () => {
 
       toast.success("Alarm created successfully!");
       navigate("/alarms");
-    } catch (error: any) {
-      toast.error(error.message || "Failed to create alarm");
+    } catch (error) {
+      toast.error((error as Error).message || "Failed to create alarm");
     } finally {
       setLoading(false);
     }
