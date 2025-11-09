@@ -4,7 +4,7 @@
 - [x] Install the MongoDB Node.js driver package
 - [x] Create src/integrations/mongodb/ directory
 - [x] Create src/integrations/mongodb/client.ts for MongoDB connection setup
-- [x] Add MONGODB_URI environment variable to .env file
+- [ ] Add MONGODB_URI environment variable to .env file
 - [ ] Test the MongoDB connection (optional, if needed)
 
 ## Notes
@@ -13,3 +13,4 @@
 - Ensure secure handling of credentials via environment variables
 - Connection test attempted but encountered SSL/TLS error (likely network or firewall issue)
 - Client setup is ready for use in the application
+- SSL/TLS error suggests potential network configuration or MongoDB Atlas whitelist issues

@@ -25,7 +25,7 @@ export class PaymentService {
   static async redirectToCheckout(sessionId: string) {
     const stripe = await stripePromise;
     if (!stripe) {
-      throw new Error('Stripe failed to initialize');
+      throw new Error('Stripe failed to initialize. Please check your Stripe publishable key.');
     }
 
     // Use type assertion to access redirectToCheckout

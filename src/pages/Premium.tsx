@@ -36,10 +36,16 @@ const Premium = () => {
 
       // For now, use a placeholder price ID - this would be configured in Stripe
       const priceId = "price_placeholder"; // Replace with actual Stripe price ID
+
+      if (!import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY) {
+        toast.error("Payment system is not configured. Please contact support.");
+        return;
+      }
+
       await PaymentService.handleSubscription(priceId, user.id);
     } catch (error) {
       console.error("Error upgrading to premium:", error);
-      toast.error("Failed to start checkout process");
+      toast.error("Failed to start checkout process. Please try again.");
     } finally {
       setLoading(false);
     }

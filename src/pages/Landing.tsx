@@ -45,72 +45,72 @@ const Landing = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card className="p-6 hover:shadow-lg transition-shadow bg-card border-border">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                <Bell className="w-6 h-6 text-primary" />
+            <Card className="p-6 hover:shadow-xl hover:scale-105 transition-all duration-300 bg-card border-border group cursor-pointer">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center mb-4 transition-colors duration-300">
+                <Bell className="w-6 h-6 text-primary group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Smart Reminders</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300">Smart Reminders</h3>
+              <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                 Get timely notifications via browser and email to stay on track with your DSA practice schedule.
               </p>
             </Card>
 
-            <Card className="p-6 hover:shadow-lg transition-shadow bg-card border-border">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                <Clock className="w-6 h-6 text-primary" />
+            <Card className="p-6 hover:shadow-xl hover:scale-105 transition-all duration-300 bg-card border-border group cursor-pointer">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center mb-4 transition-colors duration-300">
+                <Clock className="w-6 h-6 text-primary group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Custom Scheduling</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300">Custom Scheduling</h3>
+              <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                 Set alarms for specific LeetCode problems and customize your practice routine to fit your schedule.
               </p>
             </Card>
 
-            <Card className="p-6 hover:shadow-lg transition-shadow bg-card border-border relative overflow-hidden">
+            <Card className="p-6 hover:shadow-xl hover:scale-105 transition-all duration-300 bg-card border-border relative overflow-hidden group cursor-pointer">
               <div className="absolute top-4 right-4">
-                <span className="px-3 py-1 text-xs font-semibold rounded-full bg-premium text-white">
+                <span className="px-3 py-1 text-xs font-semibold rounded-full bg-premium text-white group-hover:bg-premium/90 transition-colors duration-300">
                   Premium
                 </span>
               </div>
-              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                <TrendingUp className="w-6 h-6 text-accent" />
+              <div className="w-12 h-12 rounded-xl bg-accent/10 group-hover:bg-accent/20 flex items-center justify-center mb-4 transition-colors duration-300">
+                <TrendingUp className="w-6 h-6 text-accent group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Progress Analytics</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-accent transition-colors duration-300">Progress Analytics</h3>
+              <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                 Track your solving patterns, streaks, and improvement over time with detailed analytics.
               </p>
             </Card>
 
-            <Card className="p-6 hover:shadow-lg transition-shadow bg-card border-border">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                <Target className="w-6 h-6 text-primary" />
+            <Card className="p-6 hover:shadow-xl hover:scale-105 transition-all duration-300 bg-card border-border group cursor-pointer">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center mb-4 transition-colors duration-300">
+                <Target className="w-6 h-6 text-primary group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">LeetCode Integration</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300">LeetCode Integration</h3>
+              <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                 Search and select problems directly from LeetCode. Click notifications to jump straight to solving.
               </p>
             </Card>
 
-            <Card className="p-6 hover:shadow-lg transition-shadow bg-card border-border">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                <Award className="w-6 h-6 text-primary" />
+            <Card className="p-6 hover:shadow-xl hover:scale-105 transition-all duration-300 bg-card border-border group cursor-pointer">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center mb-4 transition-colors duration-300">
+                <Award className="w-6 h-6 text-primary group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Streak Tracking</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300">Streak Tracking</h3>
+              <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                 Build momentum with daily streaks and celebrate your consistency in practicing DSA.
               </p>
             </Card>
 
-            <Card className="p-6 hover:shadow-lg transition-shadow bg-card border-border relative overflow-hidden">
+            <Card className="p-6 hover:shadow-xl hover:scale-105 transition-all duration-300 bg-card border-border relative overflow-hidden group cursor-pointer">
               <div className="absolute top-4 right-4">
-                <span className="px-3 py-1 text-xs font-semibold rounded-full bg-premium text-white">
+                <span className="px-3 py-1 text-xs font-semibold rounded-full bg-premium text-white group-hover:bg-premium/90 transition-colors duration-300">
                   Premium
                 </span>
               </div>
-              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-accent" />
+              <div className="w-12 h-12 rounded-xl bg-accent/10 group-hover:bg-accent/20 flex items-center justify-center mb-4 transition-colors duration-300">
+                <Zap className="w-6 h-6 text-accent group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Advanced Features</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-accent transition-colors duration-300">Advanced Features</h3>
+              <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                 Unlock difficulty-based recommendations, email reports, and personalized learning paths.
               </p>
             </Card>
